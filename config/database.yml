@@ -1,0 +1,18 @@
+defaults: &defaults
+  encoding: unicode
+  adapter: postgresql
+  username: rails
+  password: rails
+  pool: 5
+
+development:
+  <<: *defaults
+  database: case-insensitive-email-development
+
+test:
+  <<: *defaults
+  database: case-insensitive-email-test
+
+production:
+  <<: *defaults
+  database: case-insensitive-email-production
